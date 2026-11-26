@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="description" content="Una aplicación sencilla para organizar tus actividades.">
+  <title>Mi Lista de Tareas</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">ORGANIZA TU DÍA</p>
+      <h1>Mi Lista de Tareas</h1>
+      <p class="subtitle">Anota lo que necesitas hacer y lleva un control de tus actividades.</p>
+    </header>
+    <form id="task-form" class="task-form">
+      <label class="sr-only" for="task-input">Nueva tarea</label>
+      <input id="task-input" type="text" maxlength="100" placeholder="Escribe una tarea..." autocomplete="off" required>
+      <button type="submit">Agregar</button>
+    </form>
+    <section class="summary" aria-live="polite">
+      <span id="task-count">0 tareas pendientes</span>
+      <button id="clear-completed" class="text-button" type="button">Borrar completadas</button>
+    </section>
+    <ul id="task-list" class="task-list"></ul>
+    <p id="empty-state" class="empty">Todavía no tienes tareas. ¡Agrega la primera!</p>
+    <footer><span id="connection-status">Aplicación lista</span><span>Tu lista se guarda en este dispositivo.</span></footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
